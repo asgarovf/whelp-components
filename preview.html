@@ -29,17 +29,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Components</title>
   </head>
-  <body>
+  <body style="height: 100vh;margin-top: 70px;overflow: hidden !important;">
     <section id="header">
       <header>
-          <nav id="navbar" class="header">
+          <nav id="navbar" class="header" style="background: #fafafa !important;">
               <div class="container-fluid">
                   <div class="navbar-main">
-                    <div style="display: flex;align-items: center; justify-content: space-between;width: 100%;">
+                    <div style="display: flex;align-items: center; justify-content: space-between;width: 100%; ">
                         <div class="d-flex align-items-center">
-                            <div class="nav-brand" id="navbar-brand">
-                                <a href="index.html"><img src="img/canva-logo.png" width="65" height="60" alt=""></a>
-                              </div>
                               <div class="login-button d-none d-xl-block">
                                 <a href="index.html">Back</a>
                             </div>
@@ -84,10 +81,7 @@
                             </div>
                          </div>
 
-                      <div class="navbar-buttons-wrapper">
-                        <div class="question-mark">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-1.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17zM8.75 9.85c.05-1.62 1.17-2.8 3.2-2.8 1.87 0 3.12 1.08 3.12 2.6 0 1.04-.52 1.77-1.45 2.33-.9.52-1.15.87-1.15 1.55v.39H10.9l-.01-.47c-.06-1.02.33-1.64 1.28-2.2.84-.5 1.13-.87 1.13-1.54 0-.71-.57-1.23-1.43-1.23-.89 0-1.45.54-1.5 1.37H8.74zm3 7.33c-.68 0-1.13-.43-1.13-1.09 0-.66.45-1.1 1.13-1.1.7 0 1.14.44 1.14 1.1 0 .66-.44 1.09-1.14 1.09z"></path></svg>
-                        </div>
+                      <div class="navbar-buttons-wrapper-2">
                         <div class="login-button">
                             <a href="#">Preview</a>
                         </div>
@@ -97,9 +91,6 @@
                         <div class="signup-button">
                             <a href="#">Sign up</a>
                         </div>
-                      </div>
-                      <div class="bars">
-                        <span><i class="fa fa-bars" id="navToggle"></i></span>
                       </div>
                     </div>
                 </div>
@@ -165,6 +156,7 @@
         iframe {
             position: relative;
             width: 100%;
+            height: 100vh;
         }
         .container::-webkit-scrollbar{
             display: none;
@@ -191,83 +183,20 @@
             transition: 0.15s linear;
             text-decoration: none;
         }
-        .col-8{
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
 
     </style>
     <main id="main">
-        <section class="frames">
-            <div class="container">
+        <section class="frames" style="height: 100vh;">
+            <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-8 col-lg-4">
+                    <div class="col-12 p-0">
                         <a href="index.html">
-                            <iframe src="index.html" height="400" frameborder="0" scrolling="no"></iframe>
+                            <iframe src="index.html" frameborder="0"></iframe>
                         </a>
-                        <a href="index.html" class="nav-button">Home</a>
-                    </div>
-                    <div class="col-8 col-lg-4">
-                        <a href="chatbot.html">
-                            <iframe src="chatbot.html" height="400" frameborder="0" scrolling="no"></iframe>
-                        </a>
-                        <a href="chatbot.html" class="nav-button">Chatbot</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="footer-secondary">
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-12 col-lg-3">
-              <div class="footer-secondary-left-box">
-                <h1>Whelp</h1>
-                <span>© 2021 Whelp, Inc. All rights reserved.</span>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 footer-secondary-grid">
-              <div class="footer-secondary-right-box">
-                <p>Download</p>
-                <div class="footer-secondary-items">
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 footer-secondary-grid">
-              <div class="footer-secondary-right-box">
-                <p>Download</p>
-                <div class="footer-secondary-items">
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 footer-secondary-grid">
-              <div class="footer-secondary-right-box">
-                <p>Download</p>
-                <div class="footer-secondary-items">
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                  <span><a href="#">Company</a></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-     </section>
     </main>
 
 
