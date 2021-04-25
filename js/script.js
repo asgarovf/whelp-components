@@ -36,6 +36,15 @@ $(function () {
 });
 
 $(function () {
+  for (let i = 1; i <= 3; i++) {
+    $(`#tmp-${i}-sm`).text($(`#tmp-${i}`).text());
+  }
+  for (let i = 1; i <= 6; i++) {
+    $(`#feat-${i}-sm`).text($(`#feat-${i}`).text());
+  }
+});
+
+$(function () {
   $("#home-small").click(() => {
     if ($("#home-small-menu").hasClass("drop")) {
       $("#home-small-menu").slideUp();
@@ -264,5 +273,90 @@ $(function () {
     $("#r-5").removeClass("active");
     $("#r-6").removeClass("active");
     $("#r-7").removeClass("active");
+  });
+});
+
+$(function () {
+  const scrollAmount = 80;
+
+  $("#d-1").click(() => {
+    $(document).scrollTop(scrollAmount);
+    $("#d-1").addClass("active");
+    $("#f-1").removeClass("d-none");
+    for (let i = 1; i < 8; i++) {
+      if (i !== 1) {
+        $(`#d-${i}`).removeClass("active");
+        $(`#f-${i}`).addClass("d-none");
+      }
+    }
+  });
+
+  $("#d-2").click(() => {
+    $(document).scrollTop(scrollAmount);
+    $("#d-2").addClass("active");
+    $("#f-2").removeClass("d-none");
+    for (let i = 1; i < 8; i++) {
+      if (i !== 2) {
+        $(`#d-${i}`).removeClass("active");
+        $(`#f-${i}`).addClass("d-none");
+      }
+    }
+  });
+
+  $("#d-3").click(() => {
+    $(document).scrollTop(scrollAmount);
+    $("#d-3").addClass("active");
+    $("#f-3").removeClass("d-none");
+    for (let i = 1; i < 8; i++) {
+      if (i !== 3) {
+        $(`#d-${i}`).removeClass("active");
+        $(`#f-${i}`).addClass("d-none");
+      }
+    }
+  });
+
+  $("#d-4").click(() => {
+    $(document).scrollTop(scrollAmount);
+    $("#d-4").addClass("active");
+    $("#f-4").removeClass("d-none");
+    for (let i = 1; i < 8; i++) {
+      if (i !== 4) {
+        $(`#d-${i}`).removeClass("active");
+        $(`#f-${i}`).addClass("d-none");
+      }
+    }
+  });
+  $("#d-5").click(() => {
+    $(document).scrollTop(scrollAmount);
+    $("#d-5").addClass("active");
+    $("#f-5").removeClass("d-none");
+    for (let i = 1; i < 8; i++) {
+      if (i !== 5) {
+        $(`#d-${i}`).removeClass("active");
+        $(`#f-${i}`).addClass("d-none");
+      }
+    }
+  });
+  $("#d-6").click(() => {
+    $(document).scrollTop(scrollAmount);
+    $("#f-6").removeClass("d-none");
+    $("#d-6").addClass("active");
+    for (let i = 1; i < 8; i++) {
+      if (i !== 6) {
+        $(`#d-${i}`).removeClass("active");
+        $(`#f-${i}`).addClass("d-none");
+      }
+    }
+  });
+  $("#d-7").click(() => {
+    $(document).scrollTop(scrollAmount);
+    $("#f-7").removeClass("d-none");
+    $("#d-7").addClass("active");
+    for (let i = 1; i < 8; i++) {
+      if (i !== 7) {
+        $(`#d-${i}`).removeClass("active");
+        $(`#f-${i}`).addClass("d-none");
+      }
+    }
   });
 });

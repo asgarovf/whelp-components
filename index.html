@@ -30,6 +30,48 @@
     <title>Components</title>
   </head>
   <body>
+
+    <div class="modal" id="previewModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content blue">
+            <div class="modal-header">
+              <span data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></span>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-10">
+                      <div class="chatbot-box-item blue">
+                         <div class="container-fluid">
+                             <div class="row justify-content-center" style="height: auto !important;">
+                                 <div class="col-10 text-center chatbot-image">
+                                 </div>
+                             </div>
+                         </div>
+                      </div>
+                      <div class="col-12 mt-0">
+                        <div class="preview-content-modal">
+                          <h4>Starter</h4>
+                          <span>
+                            A very basic template that includes: a simple sequence
+                            (drip campaign), a couple of blocks, and commonly used AI
+                              responses. Just something for you to play around with to see
+                              what's possible.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn use-template-button">Use Template</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
     <section id="header">
       <header>
           <nav id="navbar" class="header">
@@ -46,39 +88,9 @@
                           <div class="menu-images">
                             <div>
                               <img src="img/navbar/social-media.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
-                            </div>
-                            <div>
-                              <img src="img/navbar/marketing.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
-                            </div>
-                            <div>
-                              <img src="img/navbar/personal.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
-                            </div>
-                            <div>
-                              <img src="img/navbar/trending.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
-                            </div>
-                            <div>
-                              <img src="img/navbar/education.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
-                            </div>
-                            <div>
-                              <img src="img/navbar/marketing.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
+                              <span id="tmp-1"><a href="#">Temp 1</a></span>
+                              <span id="tmp-2"><a href="#">Temp 2</a></span>
+                              <span id="tmp-3"><a href="#">Temp 3</a></span>
                             </div>
                           </div>
                          </div>
@@ -87,21 +99,15 @@
                           <div class="menu-images">
                             <div>
                               <img src="img/navbar/tshirt3.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
+                              <span id="feat-1"><a href="#">Feature 1</a></span>
+                              <span id="feat-2"><a href="#">Feature 2</a></span>
+                              <span id="feat-3"><a href="#">Feature 3</a></span>
                             </div>
                             <div>
                               <img src="img/navbar/features.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
-                            </div>
-                            <div>
-                              <img src="img/navbar/download.png" width="150" height="100" alt="">
-                              <span><a href="#">Home 1</a></span>
-                              <span><a href="#">Home 2</a></span>
-                              <span><a href="#">Home 3</a></span>
+                              <span id="feat-4"><a href="#">Feature 4</a></span>
+                              <span id="feat-5"><a href="#">Feature 5</a></span>
+                              <span id="feat-6"><a href="#">Feature 6</a></span>
                             </div>
                           </div>
                          </div>
@@ -149,27 +155,25 @@
                   <span><i class="fa fa-times" id="navClose"></i></span>
                 </div>
                 <a  id="home-small"><span>Home</span></a>
-                  <div id="home-small-menu">
-                      <ul>
-                      <li><a href="#">Home 1</a></li>
-                      <li><a href="#">Home 2</a></li>
-                      <li><a href="#">Home 3</a></li>
-                      </ul>
-                  </div>
                  <a href="#" id="services-small"><span>Templates <i class="fas fa-chevron-right"></i></span></a>
                   <div id="services-small-menu">
                       <ul>
-                      <li><a href="#">Template 1</a></li>
-                      <li><a href="#">Template 2</a></li>
-                      <li><a href="#">Template 3</a></li>
+                         <!-- Content is coming from jquery -->
+                        <li><a href="#" id="tmp-1-sm"></a></li>
+                        <li><a href="#" id="tmp-2-sm"></a></li>
+                        <li><a href="#" id="tmp-3-sm"></a></li>
                       </ul>
                   </div>
                  <a href="#" id="features-small"><span>Features <i class="fas fa-chevron-right"></i></span></a>
                   <div id="features-small-menu">
                     <ul>
-                    <li><a href="#">Feature 1</a></li>
-                    <li><a href="#">Feature 2</a></li>
-                    <li><a href="#">Feature 3</a></li>
+                      <!-- Content is coming from jquery -->
+                      <li><a href="#" id="feat-1-sm"></a></li>
+                      <li><a href="#" id="feat-2-sm"></a></li>
+                      <li><a href="#" id="feat-3-sm"></a></li>
+                      <li><a href="#" id="feat-4-sm"></a></li>
+                      <li><a href="#" id="feat-5-sm"></a></li>
+                      <li><a href="#" id="feat-6-sm"></a></li>
                     </ul>
                   </div>
                 <a href="chatbot.html" id="learn-small"><span>Chatbot</span></a>
@@ -208,6 +212,301 @@
           </div>
         </div>
       </div>
+
+
+
+      <section id="chatbot">
+        <div class="container-fluid">
+            <div class="row justify-content-center chatbot-items">
+               <div class="col-10 col-sm-4 col-lg-2">
+                    <div class="chatbot-box-item blue">
+                       <div class="container-fluid">
+                           <div class="row">
+                               <div class="col-12 chatbot-image">
+                               </div>
+                               <div class="col-12">
+                                   <h5>Starter</h5>
+                                   <span>by Chatuel </span>
+                               </div>
+                               <div class="col-12 text-center">
+                                   <button data-toggle="modal" data-target="#previewModal">Preview</button>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+               </div>
+
+               <div class="col-10 col-sm-4 col-lg-2">
+                <div class="chatbot-box-item blue">
+                   <div class="container-fluid">
+                       <div class="row">
+                           <div class="col-12 chatbot-image">
+
+                           </div>
+                           <div class="col-12">
+                               <h5>Starter – Learn the Basic Concepts</h5>
+                               <span>by Chatuel </span>
+                           </div>
+                           <div class="col-12 text-center">
+                               <button>Preview</button>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+               </div>
+
+               <div class="col-10 col-sm-4 col-lg-2">
+                <div class="chatbot-box-item white">
+                   <div class="container-fluid">
+                       <div class="row">
+                           <div class="col-12 chatbot-image">
+
+                           </div>
+                           <div class="col-12">
+                               <h5>Starter – Learn the Basic Concepts</h5>
+                               <span>by Chatuel </span>
+                           </div>
+                           <div class="col-12 text-center">
+                               <button>Preview</button>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+               </div>
+               <div class="col-10 col-sm-4 col-lg-2">
+                <div class="chatbot-box-item white">
+                   <div class="container-fluid">
+                       <div class="row">
+                           <div class="col-12 chatbot-image">
+
+                           </div>
+                           <div class="col-12">
+                               <h5>Starter – Learn the Basic Concepts</h5>
+                               <span>by Chatuel </span>
+                           </div>
+                           <div class="col-12 text-center">
+                               <button>Preview</button>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+               </div>
+               <div class="col-10 col-sm-4 col-lg-2">
+                <div class="chatbot-box-item white">
+                   <div class="container-fluid">
+                       <div class="row">
+                           <div class="col-12 chatbot-image">
+
+                           </div>
+                           <div class="col-12">
+                               <h5>Starter – Learn the Basic Concepts</h5>
+                               <span>by Chatuel </span>
+                           </div>
+                           <div class="col-12 text-center">
+                               <button>Preview</button>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+               </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="tabs">
+        <div class="container mt-5">
+          <div class="row justify-content-center tab-items">
+            <div class="col-10">
+                <h1 class="tabs-header">A Workspace Designed With Modern Customer Service Teams in Mind</h1>
+                <p class="tabs-text">No more managing multiple tabs to track down information, we mean it. Kustomer provides a customizable, single-screen view of the entire customer journey, so your team will never need to leave the platform.</p>
+                <div class="tabs-video">
+                    <a href="#">Video: Our actionable agent workspace</a>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="buttons-wrapper">
+                    <a class="active" id="r-1">Agent Productivity</a>
+                    <a id="r-2">Next Best Action</a>
+                    <a id="r-3">Collaboration</a>
+                    <a id="r-4">Segmentation</a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center tab-items" id="row-1" style="margin-top: 3rem;">
+            <div class="col-10 col-lg-5">
+                <div class="tabs-content">
+                    <h4>Power Your Team With Knowledge</h4>
+                    <span>Store, manage and permission product and policy materials with internal knowledge management, so agents can easily surface information and leverage dynamic responses for instant gratification.</span>
+                </div>
+            </div>
+            <div class="col-10 col-lg-5">
+                <img src="img/tabs/content-management.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <div class="row justify-content-center d-none" id="row-2"  style="margin-top: 3rem;">
+            <div class="col-10 col-lg-5">
+                <div class="tabs-content">
+                    <h4>Power Your Team With Knowledge</h4>
+                    <span>Store, manage and permission product and policy materials with internal knowledge management, so agents can easily surface information and leverage dynamic responses for instant gratification.</span>
+                </div>
+            </div>
+            <div class="col-10 col-lg-5">
+                <img src="img/tabs/Agent-Recommendations-3.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <div class="row justify-content-center  d-none" id="row-3"  style="margin-top: 3rem;">
+            <div class="col-10 col-lg-5">
+                <div class="tabs-content">
+                    <h4>Power Your Team With Knowledge</h4>
+                    <span>Store, manage and permission product and policy materials with internal knowledge management, so agents can easily surface information and leverage dynamic responses for instant gratification.</span>
+                </div>
+            </div>
+            <div class="col-10 col-lg-5">
+                <img src="img/tabs/Collaboration-1.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <div class="row justify-content-center d-none" id="row-4"  style="margin-top: 3rem;">
+            <div class="col-10 col-lg-5">
+                <div class="tabs-content">
+                    <h4>Power Your Team With Knowledge</h4>
+                    <span>Store, manage and permission product and policy materials with internal knowledge management, so agents can easily surface information and leverage dynamic responses for instant gratification.</span>
+                </div>
+            </div>
+            <div class="col-10 col-lg-5">
+                <img src="img/tabs/Segmentation.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+      <div class="container mt-5">
+          <div class="row justify-content-center tab-items">
+              <div class="col-10">
+                  <h1 class="tabs-header">AI-Powered Productivity Tools to
+                      Help Resolve Conversations Quickly</h1>
+              </div>
+              <div class="col-10">
+                  <div class="buttons-wrapper">
+                      <a class="active" id="r-5">Agent Productivity</a>
+                      <a id="r-6">Next Best Action</a>
+                      <a id="r-7">Collaboration</a>
+                      <a id="r-8">Segmentation</a>
+                  </div>
+              </div>
+          </div>
+          <div class="row justify-content-center tab-items" id="row-5" style="margin-top: 3rem;">
+              <div class="col-10 col-lg-5">
+                  <img src="img/tabs/content-management.svg" class="img-fluid" alt="">
+              </div>
+
+              <div class="col-10 col-lg-5">
+                  <div class="tabs-content">
+                      <h4>Power Your Team With Knowledge</h4>
+                      <span>Store, manage and permission product and policy materials with internal knowledge management, so agents can easily surface information and leverage dynamic responses for instant gratification.</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row justify-content-center d-none" id="row-6"  style="margin-top: 3rem;">
+              <div class="col-10 col-lg-5">
+                  <img src="img/tabs/Agent-Recommendations-3.svg" class="img-fluid" alt="">
+              </div>
+
+              <div class="col-10 col-lg-5">
+                  <div class="tabs-content">
+                      <h4>Power Your Team With Knowledge</h4>
+                      <span>Store, manage and permission product and policy materials with internal knowledge management, so agents can easily surface information and leverage dynamic responses for instant gratification.</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row justify-content-center  d-none" id="row-7"  style="margin-top: 3rem;">
+              <div class="col-10 col-lg-5">
+                  <img src="img/tabs/Collaboration-1.svg" class="img-fluid" alt="">
+              </div>
+
+              <div class="col-10 col-lg-5">
+                  <div class="tabs-content">
+                      <h4>Power Your Team With Knowledge</h4>
+                      <span>Store, manage and permission product and policy materials with internal knowledge management, so agents can easily surface information and leverage dynamic responses for instant gratification.</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row justify-content-center d-none" id="row-8"  style="margin-top: 3rem;">
+              <div class="col-10 col-lg-5">
+                  <img src="img/tabs/Segmentation.svg" class="img-fluid" alt="">
+              </div>
+
+              <div class="col-10 col-lg-5">
+                  <div class="tabs-content">
+                      <h4>Power Your Team With Knowledge</h4>
+                      <span>Store, manage and permission product and policy materials with internal knowledge management, so agents can easily surface information and leverage dynamic responses for instant gratification.</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="footer-secondary">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-12 col-lg-3">
+              <div class="footer-secondary-left-box">
+                <h1>Whelp</h1>
+                <span>© 2021 Whelp, Inc. All rights reserved.</span>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3 footer-secondary-grid">
+              <div class="footer-secondary-right-box">
+                <p>Download</p>
+                <div class="footer-secondary-items">
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3 footer-secondary-grid">
+              <div class="footer-secondary-right-box">
+                <p>Download</p>
+                <div class="footer-secondary-items">
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3 footer-secondary-grid">
+              <div class="footer-secondary-right-box">
+                <p>Download</p>
+                <div class="footer-secondary-items">
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                  <span><a href="#">Company</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </section>
+
+
+
     </main>
 
 
